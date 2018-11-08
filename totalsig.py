@@ -13,11 +13,10 @@ cleansig = sig1 + sig2 + sig3 + sig4 + sig5            # data signal as a sum of
 
 
 #NOISE
-nf = 0.5    # noise factor: a factor multiplied by noise
-noisesig = nf * np.random.random_sample(1001)
+nf = 1    # noise factor: a factor multiplied by noise
+noisesig = nf * np.random.random_sample(1001) - nf * np.random.random_sample(1001)
 
 
 totalsig = cleansig + noisesig
 
 plt.plot(haxis, totalsig)
-
