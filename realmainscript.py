@@ -1,6 +1,10 @@
 ### NN, fs, haxis and totalsigi are the four parameters for peakfinderfuction, haxis and totalsigi are the input signal axis values and can be imported as data signal instead of defining them as below
 ## This script finds only the peaks above the signal median. Sometimes there is (0,0) identified as a peak by mistake. Sometimes the last peak is not identified
 
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy as sp
+    
 NN = 1001                                     #number of data points
 haxis = np.linspace(0,10*np.pi,NN)            # horizontal axis array including 1001 points
 fs = 18                                       # filter parameter to adjust, see filter description in the function
